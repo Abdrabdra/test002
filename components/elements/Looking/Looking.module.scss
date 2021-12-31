@@ -1,0 +1,22 @@
+.section_search {
+    margin-bottom: 60px;
+
+    .search_header {
+        display: flex;
+
+        .headline {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .arrow {
+            margin-top: 19px;
+            margin-left: 35px;
+        }
+    }
+
+    .search_wrapper {
+        display: flex;
+    }
+}

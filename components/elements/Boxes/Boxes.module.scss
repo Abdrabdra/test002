@@ -1,0 +1,104 @@
+.section_boxes {
+    .box_title {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
+    .box_wrapper {
+        display: flex;
+
+        .box_item {
+            &:first-child {
+                padding-top: 40px;
+                padding-left: 45px;
+                width: 1090px;
+                height: 510px;
+                background: #101010;
+                border-radius: 20px;
+                position: relative;
+                margin-right: 30px;
+                margin-bottom: 80px;
+
+                .headline {
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: #fff;
+                    background: #fb4805;
+                    width: 250px;
+                    height: 40px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 89px;
+                }
+
+                .text {
+                    font-size: 40px;
+                    font-weight: 700;
+                    color: #fff;
+                    margin-bottom: 20px;
+
+                    &:nth-child(3) {
+                        font-size: 30px;
+                        font-weight: 400;
+                        span {
+                            color: rgb(169, 169, 169);
+                        }
+                    }
+                }
+
+                .image {
+                    position: absolute;
+                    bottom: -4px;
+                    right: 55px;
+                }
+            }
+
+            &:last-child {
+                padding: 30px;
+                width: 760px;
+                height: 510px;
+                background: #fff;
+                border-radius: 20px;
+                box-shadow: 0px 0px 30px -5px rgba(3, 26, 97, 0.1);
+
+                .headline {
+                    font-weight: 700;
+                    font-size: 28px;
+                    margin-bottom: 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .item_box {
+                    background: #f4f4f4;
+                    padding: 20px 25px 25px 25px;
+                    border-radius: 20px;
+                    width: 700px;
+                    height: 185px;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 30px;
+
+                    .box_title {
+                        font-weight: 600;
+                        font-size: 20px;
+                        margin-bottom: 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+
+                    .item_wrapper {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}

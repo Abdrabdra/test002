@@ -1,0 +1,133 @@
+.item {
+    background: #ffffff;
+    border-radius: 20px;
+    width: 280px;
+    height: 380px;
+    margin-right: 40px;
+    position: relative;
+
+    .item_favourite {
+        z-index: 9;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #ffffff;
+        box-shadow: 0px 0px 32.5581px -8.13953px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btn {
+            height: 18px;
+        }
+    }
+
+    .item_image {
+        width: 100%;
+        height: 210px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .item_text {
+        padding: 0 20px 20px 20px;
+
+        .item_title {
+            color: #031a61;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 7px;
+            line-height: 18px;
+        }
+
+        .item_price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .price_blue {
+                font-size: 24px;
+                font-weight: 700;
+                color: #031a61;
+            }
+
+            .price_gray {
+                font-size: 18px;
+                font-weight: 400;
+                color: #bbbbbb;
+                margin-top: 3px;
+                text-decoration: line-through;
+            }
+
+            .price_discount {
+                margin-top: 4px;
+                font-size: 18px;
+                font-weight: 600;
+                color: #fb4805;
+            }
+        }
+
+        .item_delivery {
+            padding-bottom: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f2f4f5;
+            border-radius: 5px;
+            width: 170px;
+            height: 30px;
+            color: #000;
+            font-size: 13px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .item_info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .count {
+                display: flex;
+
+                .rating {
+                    color: #031a61;
+                    font-size: 16px;
+                    line-height: 16px;
+                    position: relative;
+                    margin-right: 5px;
+                    margin-top: 2px;
+                }
+
+                .star {
+                    margin-right: 10px;
+                }
+
+                .rectangle {
+                    background: #c4c4c4;
+                    border-radius: 2px;
+                    width: 1px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+
+                .sold {
+                    color: rgba(3, 26, 97, 0.6);
+                    font-size: 16px;
+                    line-height: 16px;
+                    margin-top: 2px;
+                }
+            }
+
+            .basket {
+                margin-top: -8px;
+            }
+        }
+    }
+}
