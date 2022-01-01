@@ -1,9 +1,37 @@
 import Image from "next/image";
-import styles from './Header.module.scss';
+import styles from "./Header.module.scss";
+import Headroom from "react-headroom";
+import Link from "next/link";
 
 const Header = () => {
     return (
         <div className={styles.header}>
+            <div className="headroom_global">
+                <Headroom
+                    style={{
+                        zIndex: 9999,
+                    }
+                }
+                >
+                    <div className={styles.headroom}>
+                        <div className="container">
+                            <div className={styles.wrap}>
+                                <div className={styles.link}>
+                                    Продовайте на ADU24
+                                </div>
+                                <div className={styles.link}>Мои сообщение</div>
+                                <div className={styles.link}>Избранные</div>
+                                <div className={styles.link}>Уведомление</div>
+                                <a href="#">
+                                    <div className={styles.link}>
+                                        KZT / г. Алматы
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </Headroom>
+            </div>
             <div className="container">
                 <div className={styles.header_section}>
                     <div className={`${styles.header_item} ${styles.logo}`}>
@@ -26,7 +54,11 @@ const Header = () => {
                             Категории
                         </a>
                         <div className={styles.headerVector}>
-                            <Image src="/images/Vector.png" height={8} width={15} />
+                            <Image
+                                src="/images/Vector.png"
+                                height={8}
+                                width={15}
+                            />
                         </div>
                     </div>
                     <div className={`${styles.header_item} ${styles.search}`}>
