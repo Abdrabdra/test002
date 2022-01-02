@@ -6,31 +6,101 @@ import Link from "next/link";
 const Header = () => {
     return (
         <div className={styles.header}>
-            <div className="headroom_global">
-                <Headroom
-                    style={{
-                        zIndex: 9999,
-                    }
-                }
-                >
-                    <div className={styles.headroom}>
-                        <div className="container">
+            <div className={styles.headroom_global}>
+                <div className="container">
+                    <Headroom
+                        style={{
+                            zIndex: 9999,
+                        }}
+                    >
+                        <div className={styles.headroom}>
                             <div className={styles.wrap}>
-                                <div className={styles.link}>
-                                    Продовайте на ADU24
-                                </div>
-                                <div className={styles.link}>Мои сообщение</div>
-                                <div className={styles.link}>Избранные</div>
-                                <div className={styles.link}>Уведомление</div>
-                                <a href="#">
+                                <div className={styles.nav}>
                                     <div className={styles.link}>
-                                        KZT / г. Алматы
+                                        <div className={styles.img}>
+                                            <Image
+                                                src="/images/headroom1.svg"
+                                                width={38}
+                                                height={35}
+                                            />
+                                        </div>
+                                        <div
+                                            className={`${styles.item} ${styles.hidden}`}
+                                        >
+                                            Продовайте на ADU24
+                                        </div>
+                                        <div className={styles.item}>
+                                            Главная
+                                        </div>
                                     </div>
-                                </a>
+                                    <div className={styles.link}>
+                                        <div className={styles.img}>
+                                            <Image
+                                                src="/images/headroom2.svg"
+                                                width={35}
+                                                height={35}
+                                            />
+                                        </div>
+                                        <div
+                                            className={`${styles.item} ${styles.hidden}`}
+                                        >
+                                            Мои сообщение
+                                        </div>
+                                    </div>
+                                    <div className={styles.link}>
+                                        <div className={styles.img}>
+                                            <Image
+                                                src="/images/headroom3.svg"
+                                                width={39}
+                                                height={35}
+                                            />
+                                        </div>
+                                        <div
+                                            className={`${styles.item} ${styles.hidden}`}
+                                        >
+                                            Избранные
+                                        </div>
+                                    </div>
+                                    <div className={styles.link}>
+                                        <div className={styles.img}>
+                                            <Image
+                                                src="/images/headroom4.svg"
+                                                width={32}
+                                                height={35}
+                                            />
+                                        </div>
+                                        <div
+                                            className={`${styles.item} ${styles.hidden}`}
+                                        >
+                                            Уведомление
+                                        </div>
+                                    </div>
+                                    <div className={styles.link}>
+                                        <div className={styles.img}>
+                                            <Image
+                                                src="/images/headroombg.svg"
+                                                width={60}
+                                                height={40}
+                                            />
+                                        </div>
+                                        <div
+                                            className={`${styles.item} ${styles.hidden}`}
+                                        >
+                                            KZT / г. Алматы
+                                        </div>
+                                        <div className={styles.arrow}>
+                                            <Image
+                                                src="/images/arrow_down.svg"
+                                                width={12}
+                                                height={6}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </Headroom>
+                    </Headroom>
+                </div>
             </div>
             <div className="container">
                 <div className={styles.header_section}>
