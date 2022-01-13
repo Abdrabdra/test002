@@ -1,13 +1,29 @@
 import Image from "next/image";
-import Item_discount from "../ItemDiscount/Item_discount";
+import ItemDiscount from "../ItemDiscount/ItemDiscount";
 import styles from "./Boxes.module.scss";
+import { makeStyles } from "@mui/styles";
+import { Box, Grid, Typography } from "@mui/material";
+
+const useStyles = makeStyles(() => ({
+    section: {
+        background: "#f2f4f5",
+        padding: "20px",
+    },
+    path: {
+        fontSize: "1.625rem",
+        color: "#aa72ff",
+        marginBottom: "40px",
+    },
+}));
 
 const Boxes = () => {
+    const classes = useStyles();
+
     return (
-        <div className={styles.section_boxes}>
-            <div className={styles.box_title}>Предложения</div>
-            <div className={styles.box_wrapper}>
-                <div className={styles.box_item}>
+        <Box className={styles.section_boxes}>
+            <Typography className={styles.box_title}>Предложения</Typography>
+            <Grid container spacing={2} className={styles.box_wrapper} direction="row" justifyContent="center" alignItems="center">
+                <Grid item md={7} xs={12} className={styles.box_item}>
                     <div className={styles.headline}>Черная пятница</div>
                     <div className={styles.text}>
                         Смартфоны
@@ -25,9 +41,9 @@ const Boxes = () => {
                             height={383}
                         />
                     </div>
-                </div>
+                </Grid>
 
-                <div className={styles.box_item}>
+                <Grid item md={4.7} xs={12} className={styles.box_item}>
                     <div className={styles.headline}>
                         <div>Скидки</div>
                         <div className={styles.arrow}>
@@ -56,9 +72,8 @@ const Boxes = () => {
                             </div>
                         </div>
                         <div className={styles.item_wrapper}>
-                            <Item_discount />
-                            <Item_discount />
-                            <Item_discount />
+                            <ItemDiscount />
+                            <ItemDiscount />
                         </div>
                     </div>
                     <div className={styles.item_box}>
@@ -76,14 +91,13 @@ const Boxes = () => {
                             </div>
                         </div>
                         <div className={styles.item_wrapper}>
-                            <Item_discount />
-                            <Item_discount />
-                            <Item_discount />
+                            <ItemDiscount />
+                            <ItemDiscount />
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                </Grid>
+            </Grid>
+        </Box>
     );
 };
 

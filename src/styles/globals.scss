@@ -21,6 +21,8 @@ a {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
+    display: flex;
+    justify-content:last baseline;
     box-sizing: border-box;
 }
 
