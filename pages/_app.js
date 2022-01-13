@@ -1,25 +1,15 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import Head from "next/head";
 import { ThemeProvider } from "@mui/material/styles";
-import { CacheProvider } from "@emotion/react";
-import theme from "../src/theme";
-import createEmotionCache from "../src/createEmotionCache";
+import CssBaseline from "@mui/material/CssBaseline";
+import theme from "../src/utils/theme";
 
 import "../src/styles/globals.scss";
 import "../public/static/fonts/fonts.scss";
 
-const clientSideEmotionCache = createEmotionCache();
-
-export default function MyApp(props) {
-    const {
-        Component,
-        emotionCache = clientSideEmotionCache,
-        pageProps,
-    } = props;
-
+export default function MyApp({ Component, pageProps }) {
     return (
-        <CacheProvider value={emotionCache}>
+        <>
             <Head>
                 <title>AduTest</title>
                 <meta
@@ -28,14 +18,9 @@ export default function MyApp(props) {
                 />
             </Head>
             <ThemeProvider theme={theme}>
+                <CssBaseline />
                 <Component {...pageProps} />
             </ThemeProvider>
-        </CacheProvider>
+        </>
     );
 }
-
-MyApp.propTypes = {
-    Component: PropTypes.elementType.isRequired,
-    emotionCache: PropTypes.object,
-    pageProps: PropTypes.object.isRequired,
-};
