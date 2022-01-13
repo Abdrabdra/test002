@@ -70,6 +70,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "10px",
         backgroundColor: "#F4F4F4",
         maxWidth: "750px",
+        width: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
@@ -78,14 +79,9 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up("sm")]: {
             maxWidth: "750px",
         },
-
-        "& InputBase": {
-            color: "inherit",
+        "& .MuiInputBase-input": {
+            transition: "0.25s ease-in-out",
             width: "100%",
-            "& .MuiInputBase-input": {
-                transition: "0.25s ease-in-out",
-                width: "100%",
-            },
         },
     },
     menuGrid: {
@@ -213,6 +209,7 @@ export default function PrimarySearchAppBar() {
                                 >
                                     <InputBase
                                         placeholder="Найти"
+                                        sx={{width: "100%"}}
                                         inputProps={{
                                             "aria-label": "search",
                                         }}
