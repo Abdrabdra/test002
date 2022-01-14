@@ -20,7 +20,7 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
     // AppBar ab
-    ab: {
+    appbar: {
         backgroundColor: "#fff !important",
         color: "#666666",
         height: "100%",
@@ -31,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
     },
     toolbar: {
         minHeight: "64px",
+        [theme.breakpoints.down(400)]: {
+            paddingLeft: 4,
+            paddingRight: 4,
+        },
     },
     logo: {
         display: "flex",
@@ -95,6 +99,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         width: "100%",
         marginRight: "10px",
+        color: "#666666",
         [theme.breakpoints.up("md")]: {
             maxWidth: "200px",
         },
@@ -102,7 +107,14 @@ const useStyles = makeStyles((theme) => ({
             display: "none",
         },
     },
+    basketBox: {
+        color: "#000",
+        [theme.breakpoints.down("lg")]: {
+            display: "none",
+        },
+    },
     profile: {
+        color: "#666666",
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-around",
@@ -147,7 +159,7 @@ export default function PrimarySearchAppBar() {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" className={classes.ab}>
+            <AppBar position="static" className={classes.appbar}>
                 <Container className={classes.container}>
                     <Toolbar className={classes.toolbar}>
                         <Grid
@@ -162,12 +174,15 @@ export default function PrimarySearchAppBar() {
                                 sm={2}
                                 xs={2}
                                 className={classes.logo}
+                                sx={{ cursor: "pointer" }}
                             >
-                                <Image
-                                    src="/images/logo.svg"
-                                    width={120}
-                                    height={30}
-                                />
+                                <Link href="#">
+                                    <Image
+                                        src="/images/logo.svg"
+                                        width={120}
+                                        height={30}
+                                    />
+                                </Link>
                             </Grid>
                             <Grid
                                 item
@@ -209,7 +224,7 @@ export default function PrimarySearchAppBar() {
                                 >
                                     <InputBase
                                         placeholder="Найти"
-                                        sx={{width: "100%"}}
+                                        sx={{ width: "100%" }}
                                         inputProps={{
                                             "aria-label": "search",
                                         }}
@@ -233,7 +248,11 @@ export default function PrimarySearchAppBar() {
                                 </Paper>
                             </Grid>
                             <Grid item lg={3.8} className={classes.menuGrid}>
-                                <Paper elevation={0} className={classes.basket}>
+                                <Paper
+                                    elevation={0}
+                                    className={classes.basket}
+                                    sx={{ cursor: "pointer" }}
+                                >
                                     <Image
                                         src="/images/basket.svg"
                                         width={26}
@@ -248,10 +267,21 @@ export default function PrimarySearchAppBar() {
                                     >
                                         Корзина
                                     </Typography>
-                                    <Box>
+                                    <Box
+                                        className={classes.basketBox}
+                                        sx={{
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                            borderRadius: "10px",
+                                            backgroundColor: "#F4F4F4",
+                                            width: "50px",
+                                            height: "30px",
+                                        }}
+                                    >
                                         <Typography
                                             sx={{
-                                                fontSize: "1.3rem",
+                                                fontSize: "1.1rem",
                                                 fontWeight: "600",
                                             }}
                                             display={{
@@ -266,6 +296,7 @@ export default function PrimarySearchAppBar() {
                                 <Paper
                                     elevation={0}
                                     className={classes.profile}
+                                    sx={{ cursor: "pointer" }}
                                 >
                                     <Image
                                         src="/images/profile.svg"
